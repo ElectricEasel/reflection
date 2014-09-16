@@ -96,9 +96,6 @@
 					echo '</ul>';
 				}
 			?>
-
-
-			<div class="clear"></div>
 			
 			<div class="mini">
 			<?php 
