@@ -7,3 +7,6 @@
 
 /* =Theme customization starts here
 ------------------------------------------------------- */
+#wrapper {
+    background: red !important;
+}
