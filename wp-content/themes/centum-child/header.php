@@ -96,9 +96,18 @@
 					echo '</ul>';
 				}
 			?>
-
-
-			<div class="clear"></div>
+			
+			<div class="mini">
+			<?php 
+				wp_nav_menu(array(
+				'theme_location' => 'mini', // menu slug
+				'container' => false, // 'div' container will not be added
+				'menu_class' => 'nav', // <ul class="nav"> 
+				'fallback_cb' => 'default_mini', // name of default function
+				));
+			?>
+			</div>
+			
 			<?php
 			if(ot_get_option( 'centum_contact_details') == 'yes') {
 				$email = ot_get_option( 'centum_cdetails_email');
