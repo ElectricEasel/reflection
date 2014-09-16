@@ -1,0 +1,24 @@
+/*
+ Theme Name:     Centum Child
+ Description:    Centum Child Theme - use to customize theme without loosing any changes after update
+ Author:         You
+ Template:       Centum
+ Version:        1.0
+*/
+
+/* =Imports styles from the parent theme
+-------------------------------------------------------------- */
+@import url('../Centum/style.css');
+
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+.mini {
+	float: right;
+	margin-top: 10px;
+}
+.mini li {
+	display: inline-block;
+	margin: 0 6px;
+}
