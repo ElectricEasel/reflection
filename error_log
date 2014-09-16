@@ -1,0 +1,22 @@
+[28-Aug-2014 15:25:04 America/Chicago] PHP Warning:  require_once(/home/eebetaco/public_html/reflection/wp-includes/load.php): failed to open stream: No such file or directory in /home/eebetaco/public_html/reflection/wp-load.php on line 42
+[28-Aug-2014 15:25:04 America/Chicago] PHP Fatal error:  require_once(): Failed opening required '/home/eebetaco/public_html/reflection/wp-includes/load.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/eebetaco/public_html/reflection/wp-load.php on line 42
+[28-Aug-2014 15:26:20 America/Chicago] PHP Warning:  require_once(/home/eebetaco/public_html/reflection/wp-includes/load.php): failed to open stream: No such file or directory in /home/eebetaco/public_html/reflection/wp-load.php on line 42
+[28-Aug-2014 15:26:20 America/Chicago] PHP Fatal error:  require_once(): Failed opening required '/home/eebetaco/public_html/reflection/wp-includes/load.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/eebetaco/public_html/reflection/wp-load.php on line 42
+[28-Aug-2014 15:26:22 America/Chicago] PHP Warning:  require_once(/home/eebetaco/public_html/reflection/wp-includes/load.php): failed to open stream: No such file or directory in /home/eebetaco/public_html/reflection/wp-load.php on line 42
+[28-Aug-2014 15:26:22 America/Chicago] PHP Fatal error:  require_once(): Failed opening required '/home/eebetaco/public_html/reflection/wp-includes/load.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/eebetaco/public_html/reflection/wp-load.php on line 42
+[28-Aug-2014 15:26:39 America/Chicago] PHP Warning:  require(/home/eebetaco/public_html/reflection/wp-includes/load.php): failed to open stream: No such file or directory in /home/eebetaco/public_html/reflection/wp-settings.php on line 21
+[28-Aug-2014 15:26:39 America/Chicago] PHP Fatal error:  require(): Failed opening required '/home/eebetaco/public_html/reflection/wp-includes/load.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/eebetaco/public_html/reflection/wp-settings.php on line 21
+[28-Aug-2014 15:26:54 America/Chicago] PHP Warning:  require(/home/eebetaco/public_html/reflection/wp-includes/load.php): failed to open stream: No such file or directory in /home/eebetaco/public_html/reflection/wp-settings.php on line 21
+[28-Aug-2014 15:26:54 America/Chicago] PHP Fatal error:  require(): Failed opening required '/home/eebetaco/public_html/reflection/wp-includes/load.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/eebetaco/public_html/reflection/wp-settings.php on line 21
+[29-Aug-2014 13:55:53 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/eebetaco/public_html/reflection/wp-content/themes/Centum/template-portfolio3col.php on line 22
+[29-Aug-2014 14:19:28 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/eebetaco/public_html/reflection/wp-includes/functions.php on line 4450
+[29-Aug-2014 14:21:29 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/eebetaco/public_html/reflection/wp-includes/functions.php on line 4450
+[29-Aug-2014 14:21:31 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/eebetaco/public_html/reflection/wp-includes/functions.php on line 4450
+[29-Aug-2014 14:21:35 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/eebetaco/public_html/reflection/wp-includes/functions.php on line 4456
+[29-Aug-2014 14:21:38 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/eebetaco/public_html/reflection/wp-includes/functions.php on line 4456
+[29-Aug-2014 14:21:39 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/eebetaco/public_html/reflection/wp-includes/functions.php on line 4456
+[29-Aug-2014 14:22:15 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/eebetaco/public_html/reflection/wp-includes/functions.php on line 4463
+[29-Aug-2014 14:22:29 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/eebetaco/public_html/reflection/wp-includes/functions.php on line 4457
+[29-Aug-2014 14:22:32 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/eebetaco/public_html/reflection/wp-includes/functions.php on line 4457
+[29-Aug-2014 14:24:26 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/eebetaco/public_html/reflection/wp-includes/functions.php on line 4457
+[29-Aug-2014 15:08:35 UTC] PHP Parse error:  syntax error, unexpected 'add_action' (T_STRING) in /home/eebetaco/public_html/reflection/wp-content/themes/Centum/functions.php on line 873
