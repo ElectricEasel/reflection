@@ -33,6 +33,7 @@
 	wp_enqueue_script('jquery');
 	wp_head(); ?>
 
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 
 </head>
   <body <?php body_class(); ?>>
@@ -117,7 +118,7 @@
 			<div id="contact-details">
 				<ul>
 					<?php if($email) { ?><li><i class="mini-ico-envelope"></i><a href="mailto:<?php echo $email ;?>"><?php echo $email ;?></a></li><?php } ?>
-					<?php if($phone) { ?><li><i class="mini-ico-user"></i><?php echo $phone ;?></li><?php } ?>
+					<?php if($phone) { ?><li><span>Call US Today!</span> <?php echo $phone ;?></li><?php } ?>
 				</ul>
 			</div>
 			<?php } ?>

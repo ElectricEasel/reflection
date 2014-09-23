@@ -304,15 +304,6 @@ if (function_exists('register_sidebar')) {
          'before_title' => '<div class="footer-headline"><h4>',
         'after_title' => '</h4></div>',
         ));
-     register_sidebar(array(
-        'id' => 'footer4th',
-        'name' => 'Footer 4th Column',
-        'description' => '4th column for widgets in Footer.',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<div class="footer-headline"><h4>',
-        'after_title' => '</h4></div>',
-        ));
 
 
 

@@ -9,27 +9,24 @@
 	<!-- 960 Container -->
 	<div class="container">
 
-		<div class="four columns">
+		<div class="one-third column">
 			 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer 1st Column')) : endif; ?>
 		</div>
 
-		<div class="four columns">
+		<div class="one-third column">
 			<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer 2nd Column')) : endif; ?>
 		</div>
 
 
-		<div class="four columns">
+		<div class="one-third column">
 			<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer 3rd Column')) : endif; ?>
 		</div>
 
-		<div class="four columns">
-			<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer 4th Column')) : endif; ?>
-		</div>
 
 		<div class="sixteen columns">
 			<div id="footer-bottom">
-				<?php $copyrights = ot_get_option('copyrights' );  echo $copyrights?>
-				<div id="scroll-top-top"><a href="#"></a></div>
+				<?php $copyrights = '&copy; Copyright ' . date("Y") . ' ' . ot_get_option('copyrights' );  echo $copyrights?>
+				<!--<div id="scroll-top-top"><a href="#"></a></div>-->
 			</div>
 		</div>
 
