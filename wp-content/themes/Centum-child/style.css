@@ -267,6 +267,16 @@ h5 {
 }
 
 /* Body */
+.page strong.heading {
+	display: block;
+	line-height: 1.3em;
+}
+.page p a {
+	color: #0096c5;
+}
+.page p a:hover {
+	color: #0b7aa0;
+}
 .home .slider {
 	margin-bottom: 0;
 }
@@ -387,7 +397,7 @@ h5 {
 }
 @media (min-width:960px) {
 	.blue-box.thin h3 {
-		max-width: 220px;
+		max-width: 210px;
 	}
 }
 @media (max-width:959px) and (min-width:768px) {
@@ -469,6 +479,33 @@ h5 {
 .field input.wpcf7-submit {
 	font-size: 18px;
 }
+.contact-page-info {
+	font-size: 14px;
+	line-height: 1.3em;
+	color: #000;
+}
+.contact-page-info .headline {
+	background: none;
+	margin-bottom: 0;
+}
+#county-map {
+	margin-bottom: 20px;
+}
+.counties {
+	font-family: "Lato", sans-serif;
+	color: #000;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 25px;
+	line-height: 2em;
+	padding-left: 15px;
+	box-sizing: border-box;
+}
+.county .headline {
+	margin: 0;
+	background: none;
+}
+
 
 /* Footer */
 #scroll-top-top a {
