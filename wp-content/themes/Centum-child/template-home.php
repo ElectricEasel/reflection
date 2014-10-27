@@ -47,9 +47,17 @@ get_header(); ?>
 
 				echo '<section class="slider">';
 				if($style == 'boxed') { echo '<div class="container container-slider">'; }
-					putRevSlider(ot_get_option( 'incr_revo_slider' ));
-					echo '<div class="slider-form"></div>';
-				if($style == 'boxed') { echo '</div>'; }
+					putRevSlider(ot_get_option( 'incr_revo_slider' )); ?>
+					<form class="slider-form" id="wrapper3" action="/" method="post">
+						<img src="/wp-content/themes/Centum/images/first-step.png" alt="take the first step &raquo;" />
+						<span class="form-text">Get a Free Care Needs Assessment</span>
+						<input type="text" name="email" id="email" placeholder="Enter Email Address*" />
+						<select name="type" id="type" class="chosen">
+							<option value="0">Type of Care Needed</option>
+						</select>
+						<input type="submit" value="Get Started" class="button medium wide primary" />
+					</form>
+				<?php if($style == 'boxed') { echo '</div>'; }
 				echo "</section>";
 			}
 		}

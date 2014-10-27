@@ -33,13 +33,18 @@
 	wp_enqueue_script('jquery');
 	wp_head(); ?>
 
+	<link rel="stylesheet" type="text/css" href="/wp-content/themes/Centum-child/js/chosen_v1.2.0/chosen.css" />
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	
+	<script type="text/javascript" src="/wp-content/themes/Centum-child/js/chosen_v1.2.0/chosen.jquery.min.js"></script>
+	
+	<script type="text/javascript" src="/wp-content/themes/Centum-child/js/custom.js"></script>
 
 </head>
   <body <?php body_class(); ?>>
 <!-- Wrapper Start -->
-<div id="wrapper">
 
+<div id="wrapper1">
 
 <!-- Header
 ================================================== -->
@@ -85,44 +90,37 @@
 		</div>
 		<?php if($menu_area_width != 0){ ?>
 		<!-- Social / Contact -->
-		<div class="<?php echo incr_number_to_width($menu_area_width); ?>  columns">
-
-			<?php /* get the slider array */
-				$footericons = ot_get_option( 'headericons', array() );
-				if ( !empty( $footericons ) ) {
-					echo '<ul class="social-icons">';
-					foreach( $footericons as $icon ) {
-						echo '<li class="' . $icon['icons_service'] . '"><a target="_blank" title="' . $icon['title'] . '" href="' . $icon['icons_url'] . '">' . $icon['icons_service'] . '</a></li>';
-					}
-					echo '</ul>';
-				}
-			?>
+		<div class="<?php echo incr_number_to_width($menu_area_width); ?> columns fit">
 			
-			<div class="mini">
-			<?php 
-				wp_nav_menu(array(
-				'theme_location' => 'mini', // menu slug
-				'container' => false, // 'div' container will not be added
-				'menu_class' => 'nav', // <ul class="nav"> 
-				'fallback_cb' => 'default_mini', // name of default function
-				));
-			?>
-			</div>
+			<a href="#" class="livechat">Chat Live With a <span>Care Advisor</span></a>
+			<div id="topinfo">
+				<?php
+				if(ot_get_option( 'centum_contact_details') == 'yes') {
+					$email = ot_get_option( 'centum_cdetails_email');
+					$phone = ot_get_option( 'centum_cdetails_phone');
+				?>
+				<!-- Contact Details -->
+				<div id="contact-details">
+					<ul>
+						<?php if($email) { ?><li><i class="mini-ico-envelope"></i><a href="mailto:<?php echo $email ;?>"><?php echo $email ;?></a></li><?php } ?>
+						<?php if($phone) { ?><li><span>Caring for a loved one? We can help. Call today!</span> <?php echo $phone ;?></li><?php } ?>
+					</ul>
+				</div>
+				<?php } ?>
+				
+				<div class="mini">
+				<?php 
+					wp_nav_menu(array(
+					'theme_location' => 'mini', // menu slug
+					'container' => false, // 'div' container will not be added
+					'menu_class' => 'nav', // <ul class="nav"> 
+					'fallback_cb' => 'default_mini', // name of default function
+					));
+				?>
+				</div>
 			
-			<?php
-			if(ot_get_option( 'centum_contact_details') == 'yes') {
-				$email = ot_get_option( 'centum_cdetails_email');
-				$phone = ot_get_option( 'centum_cdetails_phone');
-			?>
-			<!-- Contact Details -->
-			<div id="contact-details">
-				<ul>
-					<?php if($email) { ?><li><i class="mini-ico-envelope"></i><a href="mailto:<?php echo $email ;?>"><?php echo $email ;?></a></li><?php } ?>
-					<?php if($phone) { ?><li><span>Call US Today!</span> <?php echo $phone ;?></li><?php } ?>
-				</ul>
-			</div>
-			<?php } ?>
 			<?php if(ot_get_option('centum_wpml_switcher') == "yes")  do_action('icl_language_selector'); ?>
+			</div>
 		</div>
 		<?php } ?>
 
