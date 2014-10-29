@@ -215,11 +215,10 @@ p a:hover {
 	border-color: #00577f;
 }
 h1, #page-title h1 {
-	color: #eb1a5b;
-	font-weight: 700;
-	padding: 11px 0 26px 0;
-	font-size: 22px;
-	line-height: 30px;
+	font-family: "Adobe Minion Pro", Times, "Times New Roman", serif;
+	color: #00a3cb;
+	font-weight: 600;
+	font-size: 49px;
 }
 h2 {
 	font-family: "Adobe Minion Pro Cn", Times, "Times New Roman", serif;
@@ -239,18 +238,11 @@ h3 {
 	font-size: 19px;
 	margin-bottom: 10px;
 }
-h4 {
-	color: #eb1a5b;
-	font-weight: 300;
-	font-size: 20px;
-}
 h5 {
-	color: #eb1a5b;
-	font-weight: 700;
-	font-size: 14px;
-	display: inline-block;
-	padding-right: 5px;
-	background: #fff;
+	font-family: "Sacramento", cursive;
+	color: #8a7667;
+	font-weight: 400;
+	font-size: 38px;
 }
 .button {
 	border-radius: 6px;
@@ -578,6 +570,7 @@ h5 {
 .home .slider-form input[type='submit'] {
 	float: none;
 	margin-right: 0;
+	padding: 10px 27px;
 }
 @media (max-width:1029px) and (min-width:960px) {
 	.home .slider-form input[type='text'], .home .slider-form .chosen-single, .home .slider-form .chosen-drop {
@@ -967,10 +960,6 @@ h5 {
 .why-reflection .circle_list_black ul li {
 	background-position: 3px 9px;
 }
-
-.field input.wpcf7-submit {
-	font-size: 18px;
-}
 .contact-page-info {
 	font-size: 14px;
 	line-height: 1.3em;
@@ -997,7 +986,134 @@ h5 {
 	margin: 0;
 	background: none;
 }
-
+.needs-assessment-box {
+	background: url("/wp-content/themes/Centum-child/images/footer-bg-light.jpg") 0 0 repeat #f5f3ee;
+	padding: 5px 45px;
+}
+.needs-assessment-box .assessment-heart {
+	width: 125px;
+	display: block;
+	margin: 0 auto;
+}
+.needs-assessment-box h5 {
+	text-align: center;
+}
+.needs-assessment-box h1 {
+	text-align: center;
+	margin: 10px 0;
+}
+@media (max-width:479px) {
+	.needs-assessment-box h1 {
+		font-size: 30px;
+	}
+}
+form.wpcf7-form {
+	margin-top: 40px;
+	width: 100%;
+	margin: 40px auto 0;
+}
+form.wpcf7-form .field {
+	margin-bottom: 25px;
+	overflow: visible;
+}
+form.wpcf7-form .field.half {
+	box-sizing: border-box;
+	vertical-align: top;
+}
+form.wpcf7-form label, form.wpcf7-form input, form.wpcf7-form .chosen-container {
+	width: 100% !important;
+	box-sizing: border-box;
+}
+form.wpcf7-form label {
+	font-size: 14px;
+}
+form.wpcf7-form input, form.wpcf7-form .chosen-container {
+	height: 40px;
+	border-radius: 6px;
+}
+form.wpcf7-form .chosen-single {
+	height: 100%;
+}
+form.wpcf7-form .chosen-single span {
+	height: 40px;
+	line-height: 40px;
+	font-size: 12px;
+	vertical-align: middle;
+}
+form.wpcf7-form .chosen-container-single .chosen-single div b {
+	background-position: 0px 12px !important;
+}
+form.wpcf7-form .chosen-container-single.chosen-with-drop .chosen-single div b {
+	background-position: -18px 12px !important;
+}
+form.wpcf7-form input[type="checkbox"] {
+	width: 20px !important;
+	height: 20px;
+	vertical-align: top;
+	margin: 0 6px 0 0;
+}
+form.wpcf7-form .wpcf7-checkbox .wpcf7-list-item {
+	margin-left: 0 !important;
+	margin: 5px 0;
+	display: inline-block;
+}
+form.wpcf7-form .wpcf7-checkbox input[type="checkbox"] + span {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 13px;
+	color: #000;
+}
+form.wpcf7-form textarea {
+	width: 100% !important;
+	border-radius: 6px;
+	height: 110px !important;
+	resize: none;
+}
+form.wpcf7-form .field.submit {
+	text-align: center;
+}
+form.wpcf7-form input[type="submit"] {
+	width: 180px !important;
+	font-size: 15px !important;
+	position: relative;
+	left: 50%;
+	margin-left: -90px;
+	
+}
+@media (min-width:960px) {
+	.form.wpcf7-form {
+		width: 880px;
+	}
+	form.wpcf7-form .field {
+		padding: 0 41px 0 30px;
+	}
+	form.wpcf7-form .field.half {
+		padding: 0 30px;
+		width: 49%;
+		display: inline-block;
+	}
+	form.wpcf7-form .wpcf7-checkbox .wpcf7-list-item {
+		width: 161px;
+	}
+}
+@media (min-width:768px) and (max-width: 959px) {
+	form.wpcf7-form .field {
+		padding: 0 27px 0 15px;
+	}
+	form.wpcf7-form .field.half {
+		padding: 0 15px;
+		width: 49%;
+		display: inline-block;
+	}
+	form.wpcf7-form .wpcf7-checkbox .wpcf7-list-item {
+		width: 154px;
+	}
+}
+@media (max-width:767px) {
+	form.wpcf7-form .wpcf7-checkbox .wpcf7-list-item {
+		display: block;
+	}
+}
 
 /* Sidebar */
 .blog-sidebar .widget {
