@@ -27,27 +27,6 @@
 
 </div>
 <!-- Footer End -->
-<div class="sub-foot partners">
-	<div class="container">
-		<div id="footer-logos">
-			<div class="seven columns">
-				<div class="module">
-					<img src="/wp-content/uploads/2014/10/NPDA.jpg" />
-					NPDA Believes the principle that quality private duty home care has one model of care and that model is to employ, train, monitor and supervise caregivers, the planning of care for the client and work toward a safe and secure environment for the person at home.
-				</div>
-			</div>
-			<div class="seven columns">
-				<div class="module short">
-					<img src="/wp-content/uploads/2014/10/IDPH.jpg" />
-					IDPH is responsible for health promotion and disease prevention, health care regulation, and health care delivery services in Illinois. Illinois Department of Public Health: license #3000353
-				</div>
-			</div>
-			<div class="two columns">
-				<a class="bbb" target="_blank" href="http://www.bbb.org/chicago/business-reviews/home-health-services/reflection-home-care-in-crystal-lake-il-88376684"></a>
-			</div>
-		</div>
-	</div>
-</div>
 <div class="sub-foot copyright">
 	<div class="container">
 		<div class="sixteen columns">

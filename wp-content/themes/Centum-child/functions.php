@@ -27,4 +27,11 @@ function php_execute($html){
 }
 add_filter('widget_text','php_execute',100);
 
+function my_wpcf7_form_elements($html) {
+	$text = 'Please Select';
+	$html = str_replace('<option value="">---</option>', '<option value="">' . $text . '</option>', $html);
+	return $html;
+}
+add_filter('wpcf7_form_elements', 'my_wpcf7_form_elements');
+
 ?>

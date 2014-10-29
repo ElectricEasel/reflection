@@ -35,6 +35,7 @@
 
 	<link rel="stylesheet" type="text/css" href="/wp-content/themes/Centum-child/js/chosen_v1.2.0/chosen.css" />
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
 	
 	<script type="text/javascript" src="/wp-content/themes/Centum-child/js/chosen_v1.2.0/chosen.jquery.min.js"></script>
 	
@@ -90,7 +91,7 @@
 		</div>
 		<?php if($menu_area_width != 0){ ?>
 		<!-- Social / Contact -->
-		<div class="<?php echo incr_number_to_width($menu_area_width); ?> columns fit">
+		<div class="<?php echo incr_number_to_width($menu_area_width); ?> columns">
 			
 			<a href="#" class="livechat">Chat Live With a <span>Care Advisor</span></a>
 			<div id="topinfo">

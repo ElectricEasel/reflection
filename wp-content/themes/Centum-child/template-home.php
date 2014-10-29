@@ -14,6 +14,7 @@
 
 get_header(); ?>
 </div>
+<!-- wrapper1 -->
 <?php
 
 	$slider_on  = ot_get_option( 'slider_on' );
@@ -49,7 +50,7 @@ get_header(); ?>
 				if($style == 'boxed') { echo '<div class="container container-slider">'; }
 					putRevSlider(ot_get_option( 'incr_revo_slider' )); ?>
 					<form class="slider-form" id="wrapper3" action="/" method="post">
-						<img src="/wp-content/themes/Centum/images/first-step.png" alt="take the first step &raquo;" />
+						<img src="/wp-content/themes/Centum-child/images/first-step.png" alt="take the first step &raquo;" />
 						<span class="form-text">Get a Free Care Needs Assessment</span>
 						<input type="text" name="email" id="email" placeholder="Enter Email Address*" />
 						<select name="type" id="type" class="chosen">
