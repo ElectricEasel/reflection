@@ -16,6 +16,43 @@ function default_mini() { //HTML markup for a default message in menu location
 	</ul>";
 }
 
+register_sidebar( array (
+		'name' => 'Sidebar About',
+		'id' => 'sidebar-about',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => "</div>",
+		'before_title' => '<div class="headline no-margin"><h4>',
+		'after_title' => '</h4></div>'
+	)
+);
+register_sidebar( array (
+		'name' => 'Sidebar Services',
+		'id' => 'sidebar-services',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => "</div>",
+		'before_title' => '<div class="headline no-margin"><h4>',
+		'after_title' => '</h4></div>'
+	)
+);
+register_sidebar( array (
+		'name' => 'Sidebar Caregivers',
+		'id' => 'sidebar-caregivers',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => "</div>",
+		'before_title' => '<div class="headline no-margin"><h4>',
+		'after_title' => '</h4></div>'
+	)
+);
+register_sidebar( array (
+		'name' => 'Sidebar Why Reflection',
+		'id' => 'sidebar-why-reflection',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => "</div>",
+		'before_title' => '<div class="headline no-margin"><h4>',
+		'after_title' => '</h4></div>'
+	)
+);
+
 function php_execute($html){
 	if (strpos($html,"<"."?php")!==false) {
 		ob_start();

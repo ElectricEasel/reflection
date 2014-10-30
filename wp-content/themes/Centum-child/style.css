@@ -1188,25 +1188,25 @@ form.wpcf7-form input[type="submit"] {
 .blog-sidebar .widget ul li.current-menu-item a {
 	color: #52473e;
 }
-.blog-sidebar .widget#text-5 {
+.blog-sidebar .widget.widget_text {
 	background: url("/wp-content/themes/Centum-child/images/footer-bg-light.jpg") 0 0 repeat #f5f3ee;
 	border-top: none;
 	padding: 10px 15px 20px;
 }
-.blog-sidebar .widget#text-5 .headline {
+.blog-sidebar .widget.widget_text .headline {
 	display: none;
 }
-.blog-sidebar .widget#text-5 img {
+.blog-sidebar .widget.widget_text img {
 	width: 75px;
 	display: block;
 	margin: 0 auto;
 }
-.blog-sidebar .widget#text-5 h5 {
+.blog-sidebar .widget.widget_text h5 {
 	font-size: 26px;
 	text-align: center;
 	margin: 10px 0;
 }
-.blog-sidebar .widget#text-5 .form-text {
+.blog-sidebar .widget.widget_text .form-text {
 	font-family: "Adobe Minion Pro", Times, "Times New Roman", serif;
 	font-size: 25px;
 	color: #00a3cb;
@@ -1216,39 +1216,39 @@ form.wpcf7-form input[type="submit"] {
 	display: block;
 	margin-bottom: 20px;
 }
-.blog-sidebar .widget#text-5 .chosen-container {
+.blog-sidebar .widget.widget_text .chosen-container {
 	height: 40px;
 	border-radius: 6px;
 	width: 100% !important;
 	margin-bottom: 15px;
 }
-.blog-sidebar .widget#text-5 .chosen-single {
+.blog-sidebar .widget.widget_text .chosen-single {
 	height: 100%;
 	border-color: #d4d4d4;
 }
-.blog-sidebar .widget#text-5 .chosen-single span {
+.blog-sidebar .widget.widget_text .chosen-single span {
 	height: 40px;
 	line-height: 40px;
 	font-size: 13px;
 	vertical-align: middle;
 }
-.blog-sidebar .widget#text-5 .chosen-container-single .chosen-single div b {
+.blog-sidebar .widget.widget_text .chosen-container-single .chosen-single div b {
 	background-position: 0px 12px !important;
 }
-.blog-sidebar .widget#text-5 .chosen-container-single.chosen-with-drop .chosen-single div b {
+.blog-sidebar .widget.widget_text .chosen-container-single.chosen-with-drop .chosen-single div b {
 	background-position: -18px 12px !important;
 }
-.blog-sidebar .widget#text-5 .chosen-drop .chosen-results li.highlighted {
+.blog-sidebar .widget.widget_text .chosen-drop .chosen-results li.highlighted {
 	background: linear-gradient(#66c9e2 20%, #00a3cb 90%)
 }
-.blog-sidebar .widget#text-5 input[type="submit"] {
+.blog-sidebar .widget.widget_text input[type="submit"] {
 	width: 100%;
 }
 @media (max-width:959px) and (min-width:768px) {
-	.blog-sidebar .widget#text-5 .form-text {
+	.blog-sidebar .widget.widget_text .form-text {
 		font-size: 20px;
 	}
-	.blog-sidebar .widget#text-5 .chosen-single span {
+	.blog-sidebar .widget.widget_text .chosen-single span {
 		font-size: 11px;
 	}
 }
