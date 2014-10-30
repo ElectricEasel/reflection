@@ -238,6 +238,11 @@ h3 {
 	font-size: 19px;
 	margin-bottom: 10px;
 }
+h4 {
+	color: #00a3cb;
+	font-weight: 700;
+	font-size: 19px;
+}
 h5 {
 	font-family: "Sacramento", cursive;
 	color: #8a7667;
@@ -442,11 +447,15 @@ h5 {
 	color: #52473e;
 	font-size: 15px;
 	font-weight: 400;
+	padding: 17px;
+}
+#navigation ul#menu-menu li a:hover, #navigation ul#menu-menu li.current_page_item a, #navigation ul#menu-menu li.current_page_parent a {
+	color: #8a7667;
 }
 @media (max-width:959px) and (min-width:768px) {
 	#navigation ul#menu-menu li a {
 		font-size: 13px;
-		padding: 17px;
+		padding: 17px 8px;
 	}
 }
 @media (max-width:767px) {
@@ -469,6 +478,27 @@ h5 {
 		float: none;
 		display: block;
 	}
+}
+#navigation ul#menu-menu li ul.sub-menu {
+	background: #f8f3ec;
+	box-shadow: 0 -6px 0 #f8f3ec, 0 0 6px rgba(0,0,0,0.3);
+	padding-bottom: 10px;
+	border-radius: 5px;
+}
+#navigation ul#menu-menu li ul.sub-menu li {
+	display: block;
+}
+#navigation ul#menu-menu li ul.sub-menu li a {
+	padding: 8px 17px;
+	border: none;
+	color: #8a7667;
+	font-size: 15px;
+	width: auto;
+	white-space: nowrap;
+}
+#navigation ul#menu-menu li ul.sub-menu li a:hover, #navigation ul#menu-menu li ul.sub-menu li.current_page_item a {
+	color: #00a3cb;
+	background: url("/wp-content/themes/Centum-child/images/footer-bg.jpg") 0 0 repeat #eeebe2 !important;
 }
 
 /* Body */
@@ -1046,6 +1076,9 @@ form.wpcf7-form .chosen-container-single .chosen-single div b {
 form.wpcf7-form .chosen-container-single.chosen-with-drop .chosen-single div b {
 	background-position: -18px 12px !important;
 }
+form.wpcf7-form .chosen-drop .chosen-results li.highlighted {
+	background: linear-gradient(#66c9e2 20%, #00a3cb 90%)
+}
 form.wpcf7-form input[type="checkbox"] {
 	width: 20px !important;
 	height: 20px;
@@ -1065,12 +1098,14 @@ form.wpcf7-form .wpcf7-checkbox input[type="checkbox"] + span {
 }
 form.wpcf7-form textarea {
 	width: 100% !important;
+	max-width: 100%;
+	box-sizing: border-box;
 	border-radius: 6px;
 	height: 110px !important;
 	resize: none;
 }
 form.wpcf7-form .field.submit {
-	text-align: center;
+	overflow: hidden;
 }
 form.wpcf7-form input[type="submit"] {
 	width: 180px !important;
@@ -1085,7 +1120,7 @@ form.wpcf7-form input[type="submit"] {
 		width: 880px;
 	}
 	form.wpcf7-form .field {
-		padding: 0 41px 0 30px;
+		padding: 0 44px 0 30px;
 	}
 	form.wpcf7-form .field.half {
 		padding: 0 30px;
@@ -1093,12 +1128,12 @@ form.wpcf7-form input[type="submit"] {
 		display: inline-block;
 	}
 	form.wpcf7-form .wpcf7-checkbox .wpcf7-list-item {
-		width: 161px;
+		width: 155px;
 	}
 }
 @media (min-width:768px) and (max-width: 959px) {
 	form.wpcf7-form .field {
-		padding: 0 27px 0 15px;
+		padding: 0 26px 0 15px;
 	}
 	form.wpcf7-form .field.half {
 		padding: 0 15px;
@@ -1121,6 +1156,7 @@ form.wpcf7-form input[type="submit"] {
 	border-top: 8px solid #7ec37e;
 	border-radius: 6px;
 	padding: 18px 5px 25px 15px;
+	overflow: hidden;
 }
 .blog-sidebar .widget:first-child {
 	margin-top: 20px;
@@ -1151,6 +1187,70 @@ form.wpcf7-form input[type="submit"] {
 }
 .blog-sidebar .widget ul li.current-menu-item a {
 	color: #52473e;
+}
+.blog-sidebar .widget#text-5 {
+	background: url("/wp-content/themes/Centum-child/images/footer-bg-light.jpg") 0 0 repeat #f5f3ee;
+	border-top: none;
+	padding: 10px 15px 20px;
+}
+.blog-sidebar .widget#text-5 .headline {
+	display: none;
+}
+.blog-sidebar .widget#text-5 img {
+	width: 75px;
+	display: block;
+	margin: 0 auto;
+}
+.blog-sidebar .widget#text-5 h5 {
+	font-size: 26px;
+	text-align: center;
+	margin: 10px 0;
+}
+.blog-sidebar .widget#text-5 .form-text {
+	font-family: "Adobe Minion Pro", Times, "Times New Roman", serif;
+	font-size: 25px;
+	color: #00a3cb;
+	font-weight: 700;
+	font-style: italic;
+	text-align: center;
+	display: block;
+	margin-bottom: 20px;
+}
+.blog-sidebar .widget#text-5 .chosen-container {
+	height: 40px;
+	border-radius: 6px;
+	width: 100% !important;
+	margin-bottom: 15px;
+}
+.blog-sidebar .widget#text-5 .chosen-single {
+	height: 100%;
+	border-color: #d4d4d4;
+}
+.blog-sidebar .widget#text-5 .chosen-single span {
+	height: 40px;
+	line-height: 40px;
+	font-size: 13px;
+	vertical-align: middle;
+}
+.blog-sidebar .widget#text-5 .chosen-container-single .chosen-single div b {
+	background-position: 0px 12px !important;
+}
+.blog-sidebar .widget#text-5 .chosen-container-single.chosen-with-drop .chosen-single div b {
+	background-position: -18px 12px !important;
+}
+.blog-sidebar .widget#text-5 .chosen-drop .chosen-results li.highlighted {
+	background: linear-gradient(#66c9e2 20%, #00a3cb 90%)
+}
+.blog-sidebar .widget#text-5 input[type="submit"] {
+	width: 100%;
+}
+@media (max-width:959px) and (min-width:768px) {
+	.blog-sidebar .widget#text-5 .form-text {
+		font-size: 20px;
+	}
+	.blog-sidebar .widget#text-5 .chosen-single span {
+		font-size: 11px;
+	}
 }
 
 

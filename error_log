@@ -24,3 +24,4 @@
 [28-Oct-2014 21:04:02 UTC] PHP Fatal error:  Call to undefined function str_to_lower() in /home/eebetaco/public_html/reflection/wp-content/themes/Centum-child/content-pagefull.php on line 29
 [28-Oct-2014 21:05:13 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/eebetaco/public_html/reflection/wp-content/themes/Centum-child/content-pagefull.php on line 31
 [28-Oct-2014 21:21:58 UTC] PHP Parse error:  syntax error, unexpected ':' in /home/eebetaco/public_html/reflection/wp-content/themes/Centum-child/content-page.php on line 27
+[29-Oct-2014 21:17:14 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/eebetaco/public_html/reflection/wp-content/themes/Centum/sidebar.php on line 17
