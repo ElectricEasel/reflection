@@ -40,6 +40,11 @@
 	<script type="text/javascript" src="/wp-content/themes/Centum-child/js/chosen_v1.2.0/chosen.jquery.min.js"></script>
 	
 	<script type="text/javascript" src="/wp-content/themes/Centum-child/js/custom.js"></script>
+	
+	<?php
+	echo my_wpcf7_form_prepopulate_checkbox('care-type');
+	echo my_wpcf7_form_prepopulate_select('your-interest');
+	?>
 
 </head>
   <body <?php body_class(); ?>>

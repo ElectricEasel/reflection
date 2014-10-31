@@ -23,16 +23,41 @@
 </div>
 <!-- wrapper1 end -->
 
-<?php global $post;
-// array of page ids that show this banner
-$services_pages = array(398);
-if (in_array($post->ID,$services_pages)) : ?>
-
+<?php
+global $post;
+$banner_type = get_post_meta($post->ID,'incr_banner_set',true);
+if ($banner_type) :
+	$banner_title = ucwords(str_replace('-',' ',$banner_type));
+	switch ($banner_type)
+	{
+		case 'why-reflection' :
+			$banner_bg = 'why-reflection-header.jpg';
+			break;
+		case 'about-home-care' :
+			$banner_bg = 'about-header.jpg';
+			break;
+		case 'home-care-services' :
+			$banner_bg = 'home-care-header.jpg';
+			break;
+		case 'our-caregivers' :
+			$banner_bg = 'caregivers-header.jpg';
+			break;
+		case 'areas-served' :
+			$banner_bg = 'areas-header.jpg';
+			break;
+		case 'contact-us' :
+			$banner_bg = 'contact-header.jpg';
+			break;
+		default :
+			$banner_bg = '';
+	}
+?>
+	
 <!--  Page Banner -->
 	<!-- 960 Container Start -->
-	<div id="wrapper3" class="services-banner">
+	<div id="wrapper3" class="services-banner" style="background-image: url('/wp-content/uploads/2014/08/<?=$banner_bg?>')">
 		<img src="http://reflection.eebeta.com/wp-content/uploads/2014/08/slider-heart.png" alt="">
-		<h1>Home Care Services</h1>
+		<h1><?=$banner_title?></h1>
 	</div>
 	<!-- 960 Container End -->
 
