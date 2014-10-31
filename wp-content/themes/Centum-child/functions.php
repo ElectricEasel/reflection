@@ -1,4 +1,5 @@
 <?php
+include_once( 'meta-boxes.php' );
     
 // Add Menu Locations
 function register_my_menus() {
@@ -15,44 +16,6 @@ function default_mini() { //HTML markup for a default message in menu location
 			<li>Create the Mini Navigation</li>
 	</ul>";
 }
-
-register_sidebar( array (
-		'name' => 'Sidebar About',
-		'id' => 'sidebar-about',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => "</div>",
-		'before_title' => '<div class="headline no-margin"><h4>',
-		'after_title' => '</h4></div>'
-	)
-);
-register_sidebar( array (
-		'name' => 'Sidebar Services',
-		'id' => 'sidebar-services',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => "</div>",
-		'before_title' => '<div class="headline no-margin"><h4>',
-		'after_title' => '</h4></div>'
-	)
-);
-register_sidebar( array (
-		'name' => 'Sidebar Caregivers',
-		'id' => 'sidebar-caregivers',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => "</div>",
-		'before_title' => '<div class="headline no-margin"><h4>',
-		'after_title' => '</h4></div>'
-	)
-);
-register_sidebar( array (
-		'name' => 'Sidebar Why Reflection',
-		'id' => 'sidebar-why-reflection',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => "</div>",
-		'before_title' => '<div class="headline no-margin"><h4>',
-		'after_title' => '</h4></div>'
-	)
-);
-
 function php_execute($html){
 	if (strpos($html,"<"."?php")!==false) {
 		ob_start();
@@ -70,5 +33,50 @@ function my_wpcf7_form_elements($html) {
 	return $html;
 }
 add_filter('wpcf7_form_elements', 'my_wpcf7_form_elements');
+
+function my_wpcf7_form_prepopulate_checkbox($post_item) {
+	if (isset($_POST[$post_item])) {
+		$box_value = sanitize_text_field($_POST[$post_item]);
+		$box_value = str_replace('-',' ',$box_value);
+		$box_value = strtolower($box_value);
+		$input_type = $post_item . '[]';
+$script = <<<SCRIPT
+<script type="text/javascript">
+jQuery( document ).ready(function($) {
+    var boxVals = $("input[name='$input_type']");
+    boxVals.each(function(){
+    console.log($(this).val());
+	    if($(this).val().toLowerCase() == "$box_value") {
+		    $(this).prop("checked","checked");
+	    }
+    });
+});
+</script>
+SCRIPT;
+		return $script;
+	} 
+}
+function my_wpcf7_form_prepopulate_select($post_item) {
+	if (isset($_POST[$post_item])) {
+		$opt_value = sanitize_text_field($_POST[$post_item]);
+		$opt_value = str_replace('-',' ',$opt_value);
+		$opt_value = strtolower($opt_value);
+$script = <<<SCRIPT
+<script type="text/javascript">
+jQuery( document ).ready(function($) {
+    var optVals = $("select[name='$post_item'] option");
+    optVals.each(function(){
+    console.log($(this).val());
+	    if($(this).val().toLowerCase() == "$opt_value") {
+		    $(this).attr("selected","selected");
+		    $(".chosen").trigger("chosen:updated");
+	    }
+    });
+});
+</script>
+SCRIPT;
+		return $script;
+	} 
+}
 
 ?>

@@ -119,14 +119,12 @@ body * {
 	max-width: 100%;
 }
 #wrapper1 {
-	padding-top: 15px !important;
+	padding-top: 11px !important;
 	width: 960px;
-}
-#wrapper1 {
 	padding-bottom: 0px !important;
 	border-top: 10px solid #3bbada;
 	position: relative;
-	z-index: 30;
+	z-index: 60;
 	background: #ffffff; /* Old browsers */
 	background: -moz-linear-gradient(top,  #ffffff 0%, #ffffff 51%, #f7f3eb 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(51%,#ffffff), color-stop(100%,#f7f3eb)); /* Chrome,Safari4+ */
@@ -320,8 +318,15 @@ h5 {
 #header {
 	min-height: 0 !important;
 }
+#header #logo {
+	max-width: 180px;
+}
+#header #logo img {
+	max-width: 100%;
+}
 #header #logo h1 {
 	padding: 0;
+	font-size: 20px;
 }
 #header #logo h1 a {
 	display: inline-block;
@@ -330,6 +335,7 @@ h5 {
 	#header #logo {
 		text-align: center;
 		margin-bottom: 20px;
+		max-width: 100%;
 	}
 	#header #logo a img {
 		float: none;
@@ -353,7 +359,7 @@ h5 {
 	font-size: 13px;
 	text-align: right;
 	position: relative;
-	top: -25px;
+	top: -21px;
 	box-shadow: 1px 1px 3px rgba(0,0,0,0.45);
 }
 #header .livechat span {
@@ -372,6 +378,7 @@ h5 {
 }
 #header #topinfo {
 	margin-right: 15px;
+	margin-top: 4px;
 }
 @media (min-width:960px) {
 	#header #topinfo {
@@ -447,7 +454,10 @@ h5 {
 	color: #52473e;
 	font-size: 15px;
 	font-weight: 400;
-	padding: 17px;
+	padding: 11px 17px 14px;
+}
+#navigation ul#menu-menu > li:first-child a {
+	padding-left: 0;
 }
 #navigation ul#menu-menu li a:hover, #navigation ul#menu-menu li.current_page_item a, #navigation ul#menu-menu li.current_page_parent a {
 	color: #8a7667;
@@ -546,6 +556,7 @@ h5 {
 }
 .home .slider-form .chosen-drop {
 	width: 215px;;
+	text-align: left;
 }
 .home .slider-form input[type='text'], .home .slider-form .chosen-single {
 	height: 40px;
@@ -986,6 +997,17 @@ h5 {
 		min-height: 0;
 		margin-bottom: 15px !important;
 	}
+	.services-block img {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.services-block h4 {
+		text-align: center;
+	}
+	.services-block a.button {
+		left: 50%;
+		margin-left: -62px;
+	}
 }
 .why-reflection .circle_list_black ul li {
 	background-position: 3px 9px;
@@ -1105,6 +1127,8 @@ form.wpcf7-form textarea {
 	resize: none;
 }
 form.wpcf7-form .field.submit {
+	padding-top: 5px;
+	margin-top: -5px;
 	overflow: hidden;
 }
 form.wpcf7-form input[type="submit"] {
@@ -1150,13 +1174,13 @@ form.wpcf7-form input[type="submit"] {
 	}
 }
 
+
 /* Sidebar */
 .blog-sidebar .widget {
 	background: url("/wp-content/themes/Centum-child/images/footer-bg.jpg") 0 0 repeat #eeebe2;
 	border-top: 8px solid #7ec37e;
 	border-radius: 6px;
 	padding: 18px 5px 25px 15px;
-	overflow: hidden;
 }
 .blog-sidebar .widget:first-child {
 	margin-top: 20px;
@@ -1191,7 +1215,7 @@ form.wpcf7-form input[type="submit"] {
 .blog-sidebar .widget.widget_text {
 	background: url("/wp-content/themes/Centum-child/images/footer-bg-light.jpg") 0 0 repeat #f5f3ee;
 	border-top: none;
-	padding: 10px 15px 20px;
+	padding: 10px 15px;
 }
 .blog-sidebar .widget.widget_text .headline {
 	display: none;
@@ -1238,8 +1262,14 @@ form.wpcf7-form input[type="submit"] {
 .blog-sidebar .widget.widget_text .chosen-container-single.chosen-with-drop .chosen-single div b {
 	background-position: -18px 12px !important;
 }
+.blog-sidebar .widget.widget_text .chosen-drop .chosen-results li {
+	margin-top: 0;
+	padding: 5px 6px;
+	color: #000;
+}
 .blog-sidebar .widget.widget_text .chosen-drop .chosen-results li.highlighted {
-	background: linear-gradient(#66c9e2 20%, #00a3cb 90%)
+	background: linear-gradient(#66c9e2 20%, #00a3cb 90%);
+	color: #fff;
 }
 .blog-sidebar .widget.widget_text input[type="submit"] {
 	width: 100%;
@@ -1306,10 +1336,9 @@ form.wpcf7-form input[type="submit"] {
 	font-weight: 900;
 }
 #footer .widget li {
-	color: #8a7667;
 	font-size: 13px;
 	line-height: 19px;
-	margin-bottom: 5px;
+	margin-bottom: 11px;
 	padding: 0;
 	background: none;
 	float: left;
@@ -1318,6 +1347,13 @@ form.wpcf7-form input[type="submit"] {
 	-moz-osx-font-smoothing: subpixel-antialiased;
 	-o-font-smoothing: auto;
 	font-smoothing: subpixel-antialiased;
+}
+#footer .widget li a {
+	color: #8a7667;
+	display: inline-block;
+}
+#footer .widget li a:hover {
+	border: 1px solid #8a7667;
 }
 @media (max-width:959px) and (min-width:768px) {
 	#footer .widget li {
