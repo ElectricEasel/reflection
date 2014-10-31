@@ -1009,6 +1009,93 @@ h5 {
 		margin-left: -62px;
 	}
 }
+.services-block.free-assessment {
+	background: url("/wp-content/themes/Centum-child/images/footer-bg.jpg") 0 0 repeat #eeebe2;
+	padding: 10px 18px 44px;
+}
+.services-block.free-assessment .headline {
+	display: none;
+}
+.services-block.free-assessment img {
+	width: 100px;
+	display: block;
+	margin: 0 auto;
+}
+.services-block.free-assessment h5 {
+	font-size: 26px;
+	text-align: center;
+	margin: 10px 0;
+}
+.services-block.free-assessment .form-text {
+	font-family: "Adobe Minion Pro", Times, "Times New Roman", serif;
+	font-size: 25px;
+	color: #00a3cb;
+	font-weight: 700;
+	font-style: italic;
+	text-align: center;
+	display: block;
+	margin: 0 -12px 20px;
+}
+.services-block.free-assessment .chosen-container {
+	height: 40px;
+	border-radius: 6px;
+	width: 100% !important;
+	margin-bottom: 15px;
+}
+.services-block.free-assessment .chosen-single {
+	height: 100%;
+	border-color: #d4d4d4;
+}
+.services-block.free-assessment .chosen-single span {
+	height: 40px;
+	line-height: 40px;
+	font-size: 13px;
+	vertical-align: middle;
+}
+.services-block.free-assessment .chosen-container-single .chosen-single div b {
+	background-position: 0px 12px !important;
+}
+.services-block.free-assessment .chosen-container-single.chosen-with-drop .chosen-single div b {
+	background-position: -18px 12px !important;
+}
+.services-block.free-assessment .chosen-drop .chosen-results li {
+	margin-top: 0;
+	padding: 5px 6px;
+	color: #000;
+}
+.services-block.free-assessment .chosen-drop .chosen-results li.highlighted {
+	background: linear-gradient(#66c9e2 20%, #00a3cb 90%);
+	color: #fff;
+}
+.services-block.free-assessment input[type="submit"] {
+	width: 184px;
+	position: absolute;
+	bottom: 25px;
+	left: 18px;
+}
+@media (max-width:959px) and (min-width:768px) {
+	.services-block.free-assessment .form-text {
+		font-size: 19px;
+	}
+	.services-block.free-assessment .chosen-single span {
+		font-size: 11px;
+	}
+	.services-block.free-assessment input[type="submit"] {
+		width: 136px;
+	}
+}
+@media (max-width:767px) {
+	.services-block.free-assessment {
+		padding-bottom: 15px;
+	}
+	.services-block.free-assessment .form-text {
+		margin: 0 0 20px;
+	}
+	.services-block.free-assessment input[type="submit"] {
+		position: static;
+		width: 100%;
+	}
+}
 .why-reflection .circle_list_black ul li {
 	background-position: 3px 9px;
 }
