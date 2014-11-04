@@ -225,6 +225,11 @@ h2 {
 	font-size: 34px;
 	margin-bottom: 4px;
 }
+@media (max-width:767px) {
+	h2 {
+		text-align: center;
+	}
+}
 @media (max-width:479px) {
 	h2 {
 		font-size: 28px;
@@ -235,6 +240,9 @@ h3 {
 	font-weight: 400;
 	font-size: 19px;
 	margin-bottom: 10px;
+}
+p + h3 {
+	margin-top: 25px;
 }
 h4 {
 	color: #00a3cb;
@@ -494,6 +502,10 @@ h5 {
 	box-shadow: 0 -6px 0 #f8f3ec, 0 0 6px rgba(0,0,0,0.3);
 	padding-bottom: 10px;
 	border-radius: 5px;
+}
+#navigation ul#menu-menu li:first-child ul.sub-menu {
+	left: -17px;
+	top: auto;
 }
 #navigation ul#menu-menu li ul.sub-menu li {
 	display: block;
@@ -1013,9 +1025,6 @@ h5 {
 	background: url("/wp-content/themes/Centum-child/images/footer-bg.jpg") 0 0 repeat #eeebe2;
 	padding: 10px 18px 44px;
 }
-.services-block.free-assessment .headline {
-	display: none;
-}
 .services-block.free-assessment img {
 	width: 100px;
 	display: block;
@@ -1096,17 +1105,26 @@ h5 {
 		width: 100%;
 	}
 }
+.services-img {
+	border-top: 8px solid #00a3cb;
+	border-radius: 5px;
+	float: right;
+	margin: 0 0 20px 20px;
+}
+@media (max-width:959px) and (min-width:768px) {
+	.services-img {
+		max-width: 200px !important;
+	}
+}
+@media (max-width:767px) {
+	.services-img {
+		float: none;
+		display: block;
+		margin: 0 auto 20px;
+	}
+}
 .why-reflection .circle_list_black ul li {
 	background-position: 3px 9px;
-}
-.contact-page-info {
-	font-size: 14px;
-	line-height: 1.3em;
-	color: #000;
-}
-.contact-page-info .headline {
-	background: none;
-	margin-bottom: 0;
 }
 #county-map {
 	margin-bottom: 20px;
@@ -1259,6 +1277,68 @@ form.wpcf7-form input[type="submit"] {
 	form.wpcf7-form .wpcf7-checkbox .wpcf7-list-item {
 		display: block;
 	}
+}
+.partner-img {
+	width: 180px;
+	text-align: center;
+	float: right;
+	margin-left: 10px;
+}
+.partner-img img {
+	display: inline-block;
+}
+@media (min-width:768px) {
+	.partner-img.idph img {
+		position: relative;
+		top: -20px;
+	}
+}
+@media (min-width:768px) {
+	.partner-img.hcaa, .partner-img.bbb {
+		height: 150px;
+	}
+}
+.partner-img.bbb img {
+	width: 129px;
+	height: auto;
+}
+.partner-link {
+	display: block;
+	margin-top: 10px;
+}
+.partner-link a {
+	font-family: "Adobe Minion Pro", Times, "Times New Roman", serif;
+	font-style: italic;
+	font-size: 18px;
+	font-weight: 600;
+	text-decoration: underline;
+}
+@media (max-width:767px) {
+	.partner-img {
+		margin: 10px auto 10px 0 !important;
+		float: none;
+	}
+}
+.testimonial em {
+	font-family: "Adobe Minion Pro Cn", Times, "Times New Roman", serif;
+	color: #8a7667;
+	font-size: 17px;
+	font-weight: 700;
+	font-style: italic;
+	margin-bottom: 5px;
+	line-height: 1.5em;
+}
+.testimonial em + span {
+	display: block;
+	font-size: 15px;
+	color: #000;
+	text-align: right;
+	margin-top: 10px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid rgba(138, 117, 102, 0.2);
+}
+.testimonial em + span:last-child {
+	border-bottom: none;
 }
 
 
@@ -1440,7 +1520,7 @@ form.wpcf7-form input[type="submit"] {
 	display: inline-block;
 }
 #footer .widget li a:hover {
-	border: 1px solid #8a7667;
+	border-bottom: 1px solid #8a7667;
 }
 @media (max-width:959px) and (min-width:768px) {
 	#footer .widget li {
