@@ -35,13 +35,10 @@
 	wp_enqueue_script('jquery');
 	wp_head(); ?>
 
-	<link rel="stylesheet" type="text/css" href="/wp-content/themes/Centum-child/js/chosen_v1.2.0/chosen.css" />
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
 	
-	<script type="text/javascript" src="/wp-content/themes/Centum-child/js/chosen_v1.2.0/chosen.jquery.min.js"></script>
-	
-	<script type="text/javascript" src="/wp-content/themes/Centum-child/js/custom.js"></script>
+	<!--<script type="text/javascript" src="/wp-content/themes/Centum-child/js/custom.js"></script>-->
 	
 	<!--Start of Zopim Live Chat Script-->
 	<script type="text/javascript">

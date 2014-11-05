@@ -607,6 +607,9 @@ h5 {
 	background: linear-gradient(to bottom,  #ffffff 0%,#fefefe 57%,#fcfcfc 65%,#f7f7f7 70%,#f4f4f4 78%,#e7e7e7 97%,#e8e8e8 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
 }
+.home .slider-form .gform_wrapper .gform_body .ginput_container .chosen-drop {
+	width: 230px;
+}
 .home .slider-form .gform_wrapper .gform_body .ginput_container .chosen-single {
 	border-radius-bottom-right: 0;
 }
@@ -698,6 +701,7 @@ h5 {
 	}
 	.home .slider-form .gform_wrapper .gform_body .email .ginput_container input[type='text'],
 	.home .slider-form .gform_wrapper .gform_body .ginput_container .chosen-single,
+	.home .slider-form .gform_wrapper .gform_body .ginput_container .chosen-drop,
 	.home .slider-form .gform_wrapper .gform_body .ginput_container .chosen-drop,
 	.home .slider-form .gform_wrapper .gform_body .ginput_container .chosen-container,
 	.home .slider-form .gform_wrapper .gform_footer input[type="submit"] {
