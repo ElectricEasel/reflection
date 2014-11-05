@@ -31,8 +31,8 @@
 	<div class="container">
 		<div class="sixteen columns">
 			<div id="footer-bottom">
-				<?php $copyrights = '&copy; ' . date("Y") . ' ' . ot_get_option('copyrights' );  echo $copyrights?>
-				<!--<div id="scroll-top-top"><a href="#"></a></div>-->
+				<span><?php $copyrights = '&copy; ' . date("Y") . ' ' . ot_get_option('copyrights' );  echo $copyrights?></span>
+				<span class="right"><a href="/privacy-policy/">Privacy Policy / Terms of Use</a></span>
 			</div>
 		</div>
 	</div>

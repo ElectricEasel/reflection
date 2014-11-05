@@ -49,25 +49,11 @@ get_header(); ?>
 				echo '<section class="slider">';
 				if($style == 'boxed') { echo '<div class="container container-slider">'; }
 					putRevSlider(ot_get_option( 'incr_revo_slider' )); ?>
-					<form class="slider-form" id="wrapper3" action="/free-care-needs-assessment" method="post">
+					<div class="slider-form" id="wrapper3">
 						<img src="/wp-content/themes/Centum-child/images/first-step.png" alt="take the first step &raquo;" />
-						<span class="form-text">Get a Free Care Needs Assessment</span>
-						<input type="text" name="email" id="email" placeholder="Enter Email Address*" />
-						<select name="care-type" id="care-type" class="chosen">
-							<option value="0">Type of Care Needed</option>
-							<option value="walking">Walking</option>
-							<option value="dressing">Dressing</option>
-							<option value="feeding">Feeding</option>
-							<option value="transportation">Transportation</option>
-							<option value="housekeeping">Housekeeping</option>
-							<option value="bathing">Bathing</option>
-							<option value="meal-preparation">Meal Preparation</option>
-							<option value="restroom-assistance">Restroom Assistance</option>
-							<option value="errands">Errands</option>
-							<option value="companionship">Companionship</option>
-						</select>
-						<input type="submit" value="Get Started" class="button medium wide primary" />
-					</form>
+						<span class="form-text">Get a Free <i>Care Assessment</i></span>
+						<?php gravity_form(3, false, false, true, '', false); ?>
+					</div>
 				<?php if($style == 'boxed') { echo '</div>'; }
 				echo "</section>";
 			}

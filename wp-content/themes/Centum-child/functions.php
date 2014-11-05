@@ -1,4 +1,12 @@
 <?php
+function myplugin_session_start(){
+	if( !isset($_SESSION)) {
+		session_regenerate_id();
+		session_start();
+	}            
+}
+add_action('init', 'myplugin_session_start', 1);
+
 include_once( 'meta-boxes.php' );
     
 // Add Menu Locations
@@ -27,56 +35,60 @@ function php_execute($html){
 }
 add_filter('widget_text','php_execute',100);
 
-function my_wpcf7_form_elements($html) {
-	$text = 'Please Select';
-	$html = str_replace('<option value="">---</option>', '<option value="">' . $text . '</option>', $html);
-	return $html;
+add_filter("gform_field_value_email", "populate_email");
+function populate_email($value) {
+	if (isset($_SESSION['email'])) {
+		return $_SESSION['email'];
+	}
+	else {
+		return "";
+	}
 }
-add_filter('wpcf7_form_elements', 'my_wpcf7_form_elements');
+add_filter("gform_field_value_type", "populate_type");
+function populate_type($value) {
+	if (isset($_SESSION['care-type'])) {
+		return $_SESSION['care-type'];
+	}
+	else {
+		return "";
+	}
+}
+add_action("gform_after_submission_3", "redirect_submission", 10, 2);
+function redirect_submission($entry, $form){
+    $host  = $_SERVER['HTTP_HOST'];
+	$uri  = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+	$extra = 'free-care-needs-assessment';
+	
+	session_start();
+	if (isset($_POST['input_1'])) {
+		$_SESSION['email'] = $_POST['input_1'];
+	}
+	if (isset($_POST['input_3'])) {
+		$_SESSION['care-type'] = $_POST['input_3'];
+	}
+	
+	header("Location: http://$host$uri/$extra");
+	exit;
+}
 
-function my_wpcf7_form_prepopulate_checkbox($post_item) {
-	if (isset($_POST[$post_item])) {
-		$box_value = sanitize_text_field($_POST[$post_item]);
-		$box_value = str_replace('-',' ',$box_value);
-		$box_value = strtolower($box_value);
-		$input_type = $post_item . '[]';
-$script = <<<SCRIPT
-<script type="text/javascript">
-jQuery( document ).ready(function($) {
-    var boxVals = $("input[name='$input_type']");
-    boxVals.each(function(){
-    console.log($(this).val());
-	    if($(this).val().toLowerCase() == "$box_value") {
-		    $(this).prop("checked","checked");
-	    }
-    });
-});
-</script>
-SCRIPT;
-		return $script;
-	} 
+function form_tag($form_tag, $form){
+    if ($form["id"] != 3){
+        //not the form whose tag you want to change, return the unchanged tag
+        return $form_tag;
+    }
+    $form_tag = preg_replace("|action='(.*?)'|", "action='custom_handler.php'", $form_tag);
+    return $form_tag;
 }
-function my_wpcf7_form_prepopulate_select($post_item) {
-	if (isset($_POST[$post_item])) {
-		$opt_value = sanitize_text_field($_POST[$post_item]);
-		$opt_value = str_replace('-',' ',$opt_value);
-		$opt_value = strtolower($opt_value);
-$script = <<<SCRIPT
-<script type="text/javascript">
-jQuery( document ).ready(function($) {
-    var optVals = $("select[name='$post_item'] option");
-    optVals.each(function(){
-    console.log($(this).val());
-	    if($(this).val().toLowerCase() == "$opt_value") {
-		    $(this).attr("selected","selected");
-		    $(".chosen").trigger("chosen:updated");
-	    }
-    });
-});
-</script>
-SCRIPT;
-		return $script;
-	} 
+
+add_filter('gform_register_init_scripts', 'gform_add_placeholder');
+function gform_add_placeholder($form) {
+    $script = '(function($){' .
+        '$(".gfield.email input").attr("placeholder","Enter Email Address*");' .
+    '})(jQuery);';
+    
+    GFFormDisplay::add_init_script(3, 'add_placeholder', GFFormDisplay::ON_PAGE_RENDER, $script);
+    
+    return $form;
 }
 
 ?>
