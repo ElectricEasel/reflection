@@ -21,7 +21,7 @@
 
 <!-- CSS
 	================================================== -->
-	<link rel="stylesheet" media="screen, print" href="<?php bloginfo('stylesheet_url'); ?>" />
+	<link rel="stylesheet" media="screen, print" href="<?php echo get_stylesheet_uri(); ?>" />
 	<?php
 	 $style = get_theme_mod( 'centum_layout_style', 'boxed' ) ;
 	 $scheme = get_theme_mod( 'centum_scheme_switch', 'light' ) ;
@@ -158,6 +158,7 @@
 
 					$menu = str_replace("\n", "", $menu);
 					$menu = str_replace("\r", "", $menu);
+					$menu = str_replace("—", "", $menu);
 					echo $menu; ?>
 			<?php
 				wp_nav_menu(array(

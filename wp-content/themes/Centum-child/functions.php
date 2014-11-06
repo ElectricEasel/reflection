@@ -38,16 +38,20 @@ add_filter('widget_text','php_execute',100);
 add_filter("gform_field_value_email", "populate_email");
 function populate_email($value) {
 	if (isset($_SESSION['email'])) {
-		return $_SESSION['email'];
+		$email = $_SESSION['email'];
+		unset($_SESSION['email']);
+		return $email;
 	}
 	else {
 		return "";
 	}
 }
-add_filter("gform_field_value_type", "populate_type");
-function populate_type($value) {
-	if (isset($_SESSION['care-type'])) {
-		return $_SESSION['care-type'];
+add_filter("gform_field_value_interest", "populate_interest");
+function populate_interest($value) {
+	if (isset($_SESSION['interest'])) {
+		$care_type = $_SESSION['interest'];
+		unset($_SESSION['interest']);
+		return $care_type;
 	}
 	else {
 		return "";
@@ -55,20 +59,13 @@ function populate_type($value) {
 }
 add_action("gform_after_submission_3", "redirect_submission", 10, 2);
 function redirect_submission($entry, $form){
-    $host  = $_SERVER['HTTP_HOST'];
-	$uri  = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-	$extra = 'free-care-needs-assessment';
-	
 	session_start();
 	if (isset($_POST['input_1'])) {
 		$_SESSION['email'] = $_POST['input_1'];
 	}
-	if (isset($_POST['input_3'])) {
-		$_SESSION['care-type'] = $_POST['input_3'];
+	if (isset($_POST['input_4'])) {
+		$_SESSION['interest'] = $_POST['input_4'];
 	}
-	
-	header("Location: http://$host$uri/$extra");
-	exit;
 }
 
 function form_tag($form_tag, $form){
